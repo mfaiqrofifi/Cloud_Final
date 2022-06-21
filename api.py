@@ -22,7 +22,7 @@ def predict():
     #prediction=model.predict(query_df)
     final_features = [np.array(int_features)]
     prediction = model.predict(final_features)
-    return render_template('tampilan.html', prediction_text='Status {}'.format(prediction[0]))
+    return render_template('tampilan.html', prediction_text='Status {}'.format(str(prediction[0])))
 
 if __name__=="__main__":
     app.run(debug=True)
