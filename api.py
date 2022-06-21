@@ -18,9 +18,9 @@ def home():
 def predict():
     #json_=request.json
     #query_df=pd.DataFrame(json_)
-    int_features=[x for x in request.form.values()]
+    int_features=[float(x) for x in request.form.values()]
     #prediction=model.predict(query_df)
-    #final_features = [np.array(int_features)]
+    final_features = [np.array(int_features)]
     prediction = model.predict(int_features)
     return render_template('tampilan.html', prediction_text='Status {}'.format(str(prediction[0])))
 
