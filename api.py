@@ -13,7 +13,7 @@ model = pickle.load(open("training3.pkl","rb"))
 @app.route('/')
 def home():
     return render_template('tampilan.html')
-
+data=['LIVED','DIED']
 @app.route("/predict",methods=["POST"])
 def predict():
     #json_=request.json
@@ -22,7 +22,7 @@ def predict():
     #prediction=model.predict(query_df)
     final_features = [np.array(int_features)]
     prediction = model.predict(final_features)
-    return render_template('tampilan.html', prediction_text='Status {}'.format(int(prediction[0])))
+    return render_template('tampilan.html', prediction_text='Status {}'.format(data[int(prediction[0])-1]))
 
 if __name__=="__main__":
     app.run(debug=True)
