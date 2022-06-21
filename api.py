@@ -1,7 +1,7 @@
-from itsdangerous import json
+#from itsdangerous import json
 import pandas as pd
 from flask import Flask, request, jsonify, render_template
-from flask_cors import CORS,cross_origin
+#from flask_cors import CORS,cross_origin
 import pickle
 import numpy as np
 
