@@ -20,7 +20,7 @@ def predict():
     #query_df=pd.DataFrame(json_)
     int_features=[float(x) for x in request.form.values()]
     #prediction=model.predict(query_df)
-    final_features = [np.array(int_features)]
+    final_features = [np.ascontiguousarray(int_features)]
     prediction = model.predict(final_features)
     return render_template('tampilan.html', prediction_text='Status {}'.format(prediction[0]))
 
