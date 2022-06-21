@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style type="text/css">
+        label{
+            display: block;
+            margin-top: 30px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Horse Colic Prediction</h1>
+    <form action="{{url_for('predict')}}"method="post">
+        <label for="surgery">surgery</label>
+        <input type="text" name="surgery" required="required"/>
+        <label for="Age">Age</label>
+        <input type="text" name="Age" required="required"/>
+        <label for="rectal_temperature">rectal temperature</label>
+        <input type="text" name="rectal_temperature" required="required"/>
+        <label for="pulse">pulse</label>
+        <input type="text" name="pulse" required="required"/>
+        <label for="respiratory_rate">respiratory rate</label>
+        <input type="text" name="respiratory_rate" required="required"/>
+        <label for="temperature_of_extremities">temperature of extremities</label>
+        <input type="text" name="temperature_of_extremities" required="required"/>
+        <label for="peripheral_pulse">peripheral pulse</label>
+        <input type="text" name="peripheral_pulse" required="required"/>
+        <label for="mucous_membranes">mucous membranes</label>
+        <input type="text" name="mucous_membranes" required="required"/>
+        <label for="capillary_refill_time">capillary refill time</label>
+        <input type="text" name="capillary_refill_time" required="required"/>
+        <label for="pain">pain</label>
+        <input type="text" name="pain" required="required"/>
+        <label for="peristalsis">peristalsis</label>
+        <input type="text" name="peristalsis" required="required"/>
+        <label for="abdominal_distension">abdominal distension</label>
+        <input type="text" name="abdominal_distension" required="required"/>
+        <label for="nasogastric_tube">nasogastric tube</label>
+        <input type="text" name="nasogastric_tube" required="required"/>
+        <label for="nasogastric_reflux">nasogastric reflux</label>
+        <input type="text" name="nasogastric_reflux" required="required"/>
+        <label for="nasogastric_reflux_PH">nasogastric reflux PH</label>
+        <input type="text" name="nasogastric_reflux_PH" required="required"/>
+        <label for="rectal_examination">rectal examination</label>
+        <input type="text" name="rectal_examination" required="required"/>
+        <label for="abdomen">abdomen</label>
+        <input type="text" name="abdomen" required="required"/>
+        <label for="packed_cell_volume">packed cell volume</label>
+        <input type="text" name="packed_cell_volume" required="required"/>
+        <label for="total_protein">total protein</label>
+        <input type="text" name="total_protein" required="required"/>
+        <label for="abdominocentesis_appearance">abdominocentesis appearance</label>
+        <input type="text" name="abdominocentesis_appearance" required="required"/>
+        <label for="abdomcentesis_total_protein">abdomcentesis total protein</label>
+        <input type="text" name="abdomcentesis_total_protein" required="required"/><br/>
+        <button type="submit">Predict</button>
+    </form>
+    {{prediction_text}}
+</body>
+</html>
